@@ -15,8 +15,14 @@ function primesNo(l_n, h_n) {
 }
 primesNo(2, 20);
 
-for(var i =0;i<10;i++){
-    var random = Math.random()*6;
+
+function random() {
+    var random = Math.random() * 10000;
     var result = Math.round(random);
-    console.log("random",result);
+    return result;
 }
+function match() {
+    console.log('r = ', random());
+}
+match();
+//match(random()); thi is called "call by reference" when i take a parameter in match function this will work
