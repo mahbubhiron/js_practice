@@ -7,20 +7,25 @@ function factorial(n) {
 }
 
 var result = factorial(0);
-
 console.log('Factorial ', result);
 
-//
-// function fibonacci(n) {
-//     var fibo = [0, 1];
+var fibo = [0, 1];
+for (var i = 2; i <= 10; i++) {
+    fibo[i] = fibo[i - 1] + fibo[i - 2];
+}
+console.log('fibo=',fibo);
 
-//     for (var i = 2; i <= n; i++) {3
-//         fibo[i] = fibo[i - 1] + fibo[i - 2];
-//         console.log(fibo[i], fibo[i - 1], fibo[i -2]);
-//     }
-//     return fibo;
-// }
-// console.log(fibonacci(10));
+
+function fibonacci(n) {
+    var fibo = [0, 1];
+
+    for (var i = 2; i <= n; i++) {3
+        fibo[i] = fibo[i - 1] + fibo[i - 2];
+        console.log(fibo[i], fibo[i - 1], fibo[i -2]);
+    }
+    return fibo;
+}
+console.log(fibonacci(10));
 
 function fibonacci(n){
     if(n == 0){
